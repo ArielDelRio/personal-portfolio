@@ -18,4 +18,22 @@ const NavItem = styled(Link)`
   }
 `;
 
-export { NavItem };
+const ContactNavItem = styled(Link)`
+  cursor: pointer;
+  color: #000;
+  font-size: 1rem;
+  text-decoration: none;
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  transition: background-color 300ms;
+  &:hover {
+    background-color: #E5E5E5;
+  }
+
+`;
+
+export { NavItem, ContactNavItem };
