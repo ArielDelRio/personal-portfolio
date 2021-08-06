@@ -1,17 +1,17 @@
 import { Container, Box, Flex, Square } from "@chakra-ui/react";
 import React from "react";
-import Content from "./HeroSection.style";
 
 const HeroSection = () => {
   return (
     <Flex display="flex" minHeight="100vh" bgColor="#E5E5E5">
-      <Box flex="1" minHeight="100vh" maxWidth="50vw" bgColor="#E5E5E5"></Box>
+      <Box flex="1" minHeight="100vh" maxWidth="40vw" bgColor="#E5E5E5"></Box>
       <Box
         flex="2"
-        rotate="(187deg)"
         minHeight="100vh"
-        maxWidth="50vw"
+        maxWidth="60vw"
         bgColor="#000"
+        borderLeft={{base: "100vw solid #E5E5E5", sm: "10vw solid #E5E5E5"}}
+        borderBottom="100vh solid transparent"
       ></Box>
     </Flex>
   );
