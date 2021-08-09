@@ -15,7 +15,7 @@ const CustomDrawer = ({isOpen, onOpen, onClose, children }) => {
   return (
     <>
       <Button colorScheme="whiteAlpha" variant="ghost" onClick={onOpen}>
-        <HamburgerIcon color={["black", "white"]} w={10} h={10} />
+        <HamburgerIcon color={{base: "black", md: "white"}} w={10} h={10} />
       </Button>
 
       <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
