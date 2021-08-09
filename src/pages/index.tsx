@@ -1,9 +1,7 @@
 import * as React from "react";
-import Navbar from "../components/navbar/Navbar";
-import Section from "../components/section/Section";
+import { Navbar } from "../components";
 import HeroSection from "./sections/HeroSection";
 
-// markup
 const IndexPage = () => {
   return (
     <div>
