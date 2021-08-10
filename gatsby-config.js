@@ -3,9 +3,21 @@ module.exports = {
     siteUrl: "https://www.yourdomain.tld",
     title: "Personal Portfolio",
   },
+  flags: {
+    DEV_SSR: false,
+  },
   plugins: [
     "gatsby-plugin-styled-components",
-    "@chakra-ui/gatsby-plugin",
+    {
+      resolve: "@chakra-ui/gatsby-plugin",
+      options: {
+        /**
+         * @property {boolean} [resetCSS=true]
+         * if `false`, this plugin will not use `<CSSReset />
+         */
+        resetCSS: true,
+      },
+    },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
@@ -17,9 +29,9 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /assets/ // See below to configure properly
-        }
-      }
-    }
+          include: /assets/, // See below to configure properly
+        },
+      },
+    },
   ],
 };
