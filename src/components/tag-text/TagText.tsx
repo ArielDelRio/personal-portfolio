@@ -6,7 +6,7 @@ const TagText = ({ children, value }) => {
     <>
       <Text
         as="em"
-        fontSize={{base: "2xl", md: "xx-large"}}
+        fontSize={{ base: "2xl", md: "xx-large" }}
         fontFamily="Dancing Script"
         color="gray.500"
       >
@@ -15,7 +15,7 @@ const TagText = ({ children, value }) => {
       {children}
       <Text
         as="em"
-        fontSize={{base: "2xl", md: "xx-large"}}
+        fontSize={{ base: "2xl", md: "xx-large" }}
         fontFamily="Dancing Script"
         color="gray.500"
       >

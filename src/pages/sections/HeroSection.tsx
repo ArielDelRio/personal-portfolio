@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import {
   Box,
   Flex,
@@ -15,7 +15,7 @@ import { Link } from "gatsby";
 import Pana from "../../assets/pana.svg";
 
 const HeroSection = () => {
-  const [isLargerThan767] = useMediaQuery("(min-width: 767px)")
+  const [isLargerThan767] = useMediaQuery("(min-width: 767px)");
 
   return (
     <Flex
@@ -33,13 +33,14 @@ const HeroSection = () => {
         bgColor="#E5E5E5"
         fontFamily="Roboto"
       >
-        <Text
-          fontSize={{ base: "3xl", md: "xx-large" }}
-          fontWeight="bold"
-          textAlign={["left"]}
-          mt="14"
-        >
-          Hi, it's me
+        <Box mt="14">
+          <Text
+            fontSize={{ base: "3xl", md: "xx-large" }}
+            fontWeight="bold"
+            textAlign={["left"]}
+          >
+            Hi, it's me
+          </Text>
           <Text
             fontSize={{ base: "3xl", md: "5xl" }}
             mt="-2"
@@ -47,7 +48,7 @@ const HeroSection = () => {
           >
             Ariel Del Rio
           </Text>
-        </Text>
+        </Box>
         <Text
           fontSize={{ base: "large", md: "x-large" }}
           fontWeight="bold"
@@ -65,17 +66,20 @@ const HeroSection = () => {
         >
           <TagText value="code">
             <Text fontFamily="cursive" color="gray.600">
+              I'm a{" "}
               <Typical
-                steps={[
-                  "I'm a programmer 💻",
-                  2000,
-                  "I'm a designer 🤹‍♂️",
-                  2000,
-                  "I'm a pet lover 🐶",
-                  3000,
-                ]}
+                steps={
+                  useRef([
+                    "programmer 💻",
+                    1000,
+                    "designer 🤹‍♂️",
+                    1000,
+                    "pet lover 🐶",
+                    1000,
+                  ]).current
+                }
                 loop={Infinity}
-                wrapper="p"
+                wrapper="b"
               />
             </Text>
           </TagText>
@@ -150,9 +154,19 @@ const HeroSection = () => {
         borderLeft={{ md: "8vw solid #E5E5E5" }}
         borderBottom={{ md: "100vh solid transparent" }}
       >
-          <Box w={["100vw", "auto"]} h={["auto", "100vh"]} d="flex" flexDirection={["column", "row"]} justifyContent="center" alignItems="center" mr="4">
-            <Pana style={ !isLargerThan767 ? {width: "100vw", height: "30vh"}: {}} />
-          </Box>
+        <Box
+          w={["100vw", "auto"]}
+          h={["auto", "100vh"]}
+          d="flex"
+          flexDirection={["column", "row"]}
+          justifyContent="center"
+          alignItems="center"
+          mr="4"
+        >
+          <Pana
+            style={!isLargerThan767 ? { width: "100vw", height: "30vh" } : {}}
+          />
+        </Box>
       </Box>
     </Flex>
   );
