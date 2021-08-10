@@ -155,8 +155,8 @@ const HeroSection = () => {
         borderBottom={{ md: "100vh solid transparent" }}
       >
         <Box
-          w={["100vw", "auto"]}
-          h={["auto", "100vh"]}
+          w={{ base: "100vw", md: "auto" }}
+          h={{ base: "auto", md: "100vh" }}
           d="flex"
           flexDirection={["column", "row"]}
           justifyContent="center"
