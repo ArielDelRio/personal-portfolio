@@ -6,17 +6,15 @@ import {
   Button,
   Stack,
   Icon,
-  useMediaQuery,
+  Image,
 } from "@chakra-ui/react";
 import Typical from "react-typical";
 import { TagText } from "../../components";
 import { FaAt, FaFileDownload, FaGithub, FaLinkedin } from "react-icons/fa";
 import { Link } from "gatsby";
-import Pana from "../../assets/pana.svg";
+import pana_img from "../../images/pana.svg";
 
 const HeroSection = () => {
-  const [isLargerThan767] = useMediaQuery("(min-width: 767px)");
-
   return (
     <Flex
       display="flex"
@@ -163,8 +161,12 @@ const HeroSection = () => {
           alignItems="center"
           mr="4"
         >
-          <Pana
-            style={!isLargerThan767 ? { width: "100vw", height: "30vh" } : {}}
+          <Image
+            src={pana_img}
+            alt="Vector Image"
+            mt={{ md: 12 }}
+            w={{ base: "100vw", md: "auto" }}
+            h={{ base: "30vh", md: "auto" }}
           />
         </Box>
       </Box>
