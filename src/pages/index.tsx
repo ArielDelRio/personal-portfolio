@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Navbar } from "../components";
-import { HeroSection, AboutMeSection } from "../sections";
+import { HeroSection, AboutMeSection, SkillsSection } from "../sections";
 
 const IndexPage = () => {
   return (
@@ -8,6 +8,7 @@ const IndexPage = () => {
       <Navbar />
       <HeroSection />
       <AboutMeSection />
+      <SkillsSection />
     </div>
   );
 };
