@@ -42,16 +42,22 @@ const Navbar = () => {
                     {item.text}
                   </NavItem>
                 ))}
-                <ContactNavItem to="#contact">Contact Me</ContactNavItem>
+                <NavItem to="/#contact">Contact Me</NavItem>
               </HStack>
             ) : (
               <CustomDrawer isOpen={isOpen} onOpen={onOpen} onClose={onClose}>
                 {NavItems.map((item) => (
-                  <NavItem key={item.id} to={item.link} onClick={onClose}>
+                  <NavItem
+                    key={item.id}
+                    to={item.link}
+                    onAnchorLinkClick={onClose}
+                  >
                     {item.text}
                   </NavItem>
                 ))}
-                <ContactNavItem to="#contact" onClick={onClose}>Contact Me</ContactNavItem>
+                <ContactNavItem to="/#contact" onAnchorLinkClick={onClose}>
+                  Contact Me
+                </ContactNavItem>
               </CustomDrawer>
             )}
           </Box>

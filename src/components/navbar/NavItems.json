@@ -2,16 +2,16 @@
     {
         "id": 0,
         "text": "About Me",
-        "link": "#about-me"
+        "link": "/#about-me"
     },
     {
         "id": 1,
         "text": "Skills",
-        "link": "#skills"
+        "link": "/#skills"
     },
     {
         "id": 2,
         "text": "Portfolio",
-        "link": "#portfolio"
+        "link": "/#portfolio"
     }
 ]

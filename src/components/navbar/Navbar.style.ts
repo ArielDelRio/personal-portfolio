@@ -1,7 +1,8 @@
 import styled, { css } from "styled-components";
-import { Link } from "gatsby";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
-const NavItem = styled(Link)`
+
+const NavItem = styled(AnchorLink)`
   cursor: pointer;
   color: #fff;
   font-size: 1.1em;
@@ -18,7 +19,7 @@ const NavItem = styled(Link)`
   }
 `;
 
-const ContactNavItem = styled(Link)`
+const ContactNavItem = styled(AnchorLink)`
   cursor: pointer;
   color: #000;
   font-size: 1rem;
