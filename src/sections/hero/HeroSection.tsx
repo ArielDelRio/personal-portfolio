@@ -3,8 +3,8 @@ import { Link } from "gatsby";
 import { Box, Flex, Text, Button, Stack, Icon, Image } from "@chakra-ui/react";
 import Typical from "react-typical";
 import { FaAt, FaFileDownload, FaGithub, FaLinkedin } from "react-icons/fa";
-import { TagText } from "../../../components";
-import pana_img from "../../../images/pana.svg";
+import { TagText } from "../../components";
+import pana_img from "../../images/pana.svg";
 
 const HeroSection = () => {
   return (

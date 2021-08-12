@@ -1,12 +1,14 @@
 import React from "react";
 import { Box, Container, Heading, Image, Text } from "@chakra-ui/react";
-import logo_text_img from "../../../images/logo_text.svg";
+import logo_text_img from "../../images/logo_text.svg";
 
 const AboutMeSection = () => {
   return (
     <Box minH="30vh" bg="#1D1D1D" color="white" p="8" fontFamily="Roboto">
       <Container maxW="container.xl">
-        <Heading as="h2">About me</Heading>
+        <Heading as="h2" id="about-me">
+          About me
+        </Heading>
         <Box
           d="flex"
           flexDirection={["column", "row"]}
