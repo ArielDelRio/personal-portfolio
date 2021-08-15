@@ -1,24 +1,54 @@
-import { Box, Center, Image, Text } from "@chakra-ui/react";
+import { Image } from "@chakra-ui/react";
 import React from "react";
-import { Face, Container } from "./Diamond.style";
+import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
+import {
+  Container,
+  ContainerIn,
+  Face,
+  Content,
+  Info,
+  Rate,
+  Tooltip,
+} from "./Diamond.style";
 
-const Diamond = ({ image_path }) => {
+interface DiamondProp {
+  image_path: string;
+  skill_name: string;
+  rate: number;
+}
+
+const Diamond: React.FC<DiamondProp> = ({ image_path, skill_name, rate }) => {
   return (
-    <Container
-      w="32"
-      h="32"
-      mb="10"
-      cursor="pointer"
-      clipPath="polygon(50% 0, 100% 50%, 50% 100%, 0 50%)"
-      position="relative"
-      _hover={{}}
-    >
-      <Face className="front">
-        <Image src={image_path} alt="image_path" boxSize="14" />
-      </Face>
-      <Face className="back">
-        <Text>Back</Text>
-      </Face>
+    <Container>
+      <ContainerIn className="containerIn">
+        <Face className="front">
+          <Content>
+            <Image src={image_path} alt="image_path" boxSize="10" />
+          </Content>
+        </Face>
+        <Face className="back">
+          <Content>
+            <Info>
+              <Rate>
+                {[...Array(5)].map((n, i) => {
+                  return (
+                    <span key={i}>
+                      {i < rate && i + 1 > rate ? (
+                        <FaStarHalfAlt />
+                      ) : i < rate ? (
+                        <FaStar />
+                      ) : (
+                        <FaRegStar />
+                      )}
+                    </span>
+                  );
+                })}
+              </Rate>
+              <Tooltip>{skill_name}</Tooltip>
+            </Info>
+          </Content>
+        </Face>
+      </ContainerIn>
     </Container>
   );
 };

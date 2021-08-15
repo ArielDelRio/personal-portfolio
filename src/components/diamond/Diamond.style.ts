@@ -1,37 +1,88 @@
 import styled from "styled-components";
 
+const diamondSize = "6em";
+
 const Container = styled.div`
-  width: 32px;
-  height: 32px;
+  height: ${diamondSize};
+  width: ${diamondSize};
+  perspective: 1000;
   cursor: pointer;
-  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
-  position: relative;
+
+  &:hover {
+    .containerIn {
+      transform: rotate3d(0, 1, 0, 180deg);
+    }
+  }
+`;
+
+const ContainerIn = styled.div`
+  height: ${diamondSize};
+  width: ${diamondSize};
+  transition: 0.6s;
+  transform-style: preserve-3d;
 `;
 
 const Face = styled.div`
-  height: 100%;
-  width: 100%;
+  top: 0;
+  left: 0;
+  height: ${diamondSize};
+  width: ${diamondSize};
+  background: #fff;
+  backface-visibility: hidden;
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: rotateY(0deg);
-  transform-style: preserve-3d;
-  transition: 0.5s cubic-bezier(0.4, 0.2, 0.2, 1);
 
   &.front {
-    background-color: #c4c4c4;
-    transform: rotateY(0deg);
+    transform: rotate(-45deg);
+    background: #bababa;
+    img {
+      filter: grayscale(100%) saturate(0);
+    }
   }
 
   &.back {
-    background-color: linear-gradient(
+    transform: rotate3d(0, 1, 0, 180deg) rotate(-45deg);
+    background: linear-gradient(
       271deg,
       #c4c4c4 -1.98%,
       rgba(196, 196, 196, 0) 96.46%
     );
-    transform: rotateY(180deg);
   }
 `;
 
-export { Container, Face };
+const Content = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: ${diamondSize};
+  width: $diamondSize;
+  transform: rotate(45deg);
+`;
+
+const Info = styled.span`
+  text-align: center;
+  margin-top: 10%;
+`;
+
+const Rate = styled.span`
+  display: flex;
+  flex-direction: row;
+`;
+
+const Tooltip = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid #000;
+  margin-top: 10px;
+  &::before{
+    content:' ';
+  width: 0; 
+  height: 0; 
+  margin-top: -5px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid black;
+  }
+`;
+
+export { Container, ContainerIn, Face, Content, Info, Rate, Tooltip };

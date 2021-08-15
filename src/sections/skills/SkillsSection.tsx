@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Center, Heading, Image, Text } from "@chakra-ui/react";
 import javascript_logo from "../../images/skill_logos/javascript.svg";
+import react_logo from "../../images/skill_logos/react.svg";
 import Diamond from "../../components/diamond/Diamond";
 
 const SkillsSection = () => {
@@ -23,8 +24,13 @@ const SkillsSection = () => {
         </Heading>
       </Center>
       <Center>
-        <Box mt="32">
-          <Diamond image_path={javascript_logo} />
+        <Box mt="12">
+          <Diamond
+            image_path={javascript_logo}
+            skill_name="Javascript"
+            rate={4.5}
+          />
+          <Diamond image_path={react_logo} skill_name="React" rate={4.5} />
           {/* <Box
             w="24"
             h="24"
