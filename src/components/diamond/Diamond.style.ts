@@ -9,6 +9,8 @@ const Container = styled.div`
   perspective: 1000;
   cursor: pointer;
   transition: background-color 300ms;
+  
+  -webkit-tap-highlight-color: transparent;
 
   &.active{
     .containerIn {

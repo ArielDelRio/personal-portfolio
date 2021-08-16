@@ -23,8 +23,8 @@ const SkillsSection = () => {
           Skills
         </Heading>
       </Center>
-      <Center>
-        <Box mt={{ base: "16", sm: "8" }} d="flex">
+      <Center mt={{ base: "28", sm: "8" }}>
+        <Box d="flex">
           <VStack
             spacing={{ base: "6", sm: "8" }}
             mt={{ base: "7.5em", sm: "10.5em" }}
