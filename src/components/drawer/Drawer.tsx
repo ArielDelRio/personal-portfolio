@@ -11,20 +11,23 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 
-const CustomDrawer = ({isOpen, onOpen, onClose, children }) => {
+const CustomDrawer = ({ isOpen, onOpen, onClose, children }) => {
   return (
     <>
       <Button colorScheme="whiteAlpha" variant="ghost" onClick={onOpen}>
-        <HamburgerIcon color={{base: "black", md: "white"}} w={10} h={10} />
+        <HamburgerIcon color={{ base: "black", md: "white" }} w={10} h={10} />
       </Button>
 
-      <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
+      <Drawer
+        isOpen={isOpen}
+        placement="right"
+        onClose={onClose}
+        returnFocusOnClose={false}
+      >
         <DrawerOverlay />
         <DrawerContent backgroundColor="#000" borderLeft="2px solid">
-          <DrawerCloseButton size="lg" color="gray.400"/>
-          <DrawerHeader>
-            {/* Create your account */}
-            </DrawerHeader>
+          <DrawerCloseButton size="lg" color="gray.400" />
+          <DrawerHeader>{/* Create your account */}</DrawerHeader>
 
           <DrawerBody
             textAlign="center"
