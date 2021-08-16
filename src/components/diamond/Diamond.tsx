@@ -1,5 +1,5 @@
 import { Image } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import {
   Container,
@@ -18,12 +18,21 @@ interface DiamondProp {
 }
 
 const Diamond: React.FC<DiamondProp> = ({ image_path, skill_name, rate }) => {
+  const [active, setActive] = useState(false);
   return (
-    <Container>
+    <Container
+      className={active ? "active" : ""}
+      style={{ visibility: !skill_name ? "hidden" : "visible" }}
+      onClick={() => setActive(!active)}
+    >
       <ContainerIn className="containerIn">
         <Face className="front">
           <Content>
-            <Image src={image_path} alt="image_path" boxSize="10" />
+            <Image
+              src={image_path}
+              alt={skill_name}
+              boxSize={{ base: "6", sm: "10" }}
+            />
           </Content>
         </Face>
         <Face className="back">
