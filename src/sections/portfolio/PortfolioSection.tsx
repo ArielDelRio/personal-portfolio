@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { Box, Center, Heading, Text } from "@chakra-ui/react";
+import React, { useEffect, useState, useRef } from "react";
+import { Box, Center, Divider, Heading, Text } from "@chakra-ui/react";
 import { useBreakpointValue } from "@chakra-ui/react";
 import { Device, DeviceProps } from "../../components";
+import { useInViewport } from "react-in-viewport";
 
 const responsiveChecks = {
   base: 0.65,
@@ -17,6 +18,14 @@ const PortfolioSection = () => {
     lg: responsiveChecks.lg,
     xl: responsiveChecks.xl,
   });
+
+  const myRef = useRef();
+  const { inViewport } = useInViewport(
+    myRef,
+    {},
+    { disconnectOnLeave: false },
+    {}
+  );
 
   const [device, setDevice] = useState<DeviceProps>({ type: "MACBOOK" });
 
@@ -47,11 +56,8 @@ const PortfolioSection = () => {
           <Device type={device.type}>
             <Box
               h="100%"
-              bg="#0c0c0c"
+              bg={inViewport ? "#fff" : "#0c0c0c"}
               transition="all 500ms"
-              _hover={{
-                backgroundColor: "#FFF",
-              }}
             >
               <Box
                 h="100%"
@@ -59,10 +65,7 @@ const PortfolioSection = () => {
                 justifyContent="center"
                 alignItems="center"
                 transition="all 1500ms"
-                opacity={0}
-                _hover={{
-                  opacity: 1,
-                }}
+                opacity={inViewport ? 1 : 0}
               >
                 <Text color="black" onClick={() => alert("hey")}>
                   Hello World
@@ -70,6 +73,12 @@ const PortfolioSection = () => {
               </Box>
             </Box>
           </Device>
+          <Divider
+            ref={myRef}
+            color="white"
+            height="50px"
+            orientation="horizontal"
+          />
         </Box>
       </Center>
     </Box>
