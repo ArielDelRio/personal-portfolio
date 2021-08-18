@@ -1,8 +1,45 @@
 import React, { useEffect, useState, useRef } from "react";
-import { Box, Center, Divider, Heading, Text } from "@chakra-ui/react";
-import { useBreakpointValue } from "@chakra-ui/react";
+import Stories from "react-insta-stories";
+import {
+  Box,
+  Center,
+  Divider,
+  Heading,
+  SlideFade,
+  useBreakpointValue,
+  useDisclosure,
+} from "@chakra-ui/react";
 import { Device, DeviceProps } from "../../components";
 import { useInViewport } from "react-in-viewport";
+import react_logo from "../../images/skill_logos/react.svg";
+import gatsby_logo from "../../images/skill_logos/git.svg";
+
+const SeeMore = ({ close }) => {
+  const { isOpen, onToggle } = useDisclosure({ defaultIsOpen: true });
+  const handleClick = () => {
+    onToggle();
+    close();
+  };
+  return (
+    <Box h="100%" onClick={handleClick} d="flex" flexDirection="column-reverse">
+      <SlideFade in={isOpen}>
+        <Box
+          p="40px"
+          color="white"
+          mt="4"
+          bg="teal.500"
+          rounded="md"
+          shadow="md"
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
+          fugit aut! Tempora sed maxime natus non temporibus excepturi sequi
+          architecto suscipit harum, quasi, eum, id nihil necessitatibus laborum
+          illum veniam?
+        </Box>
+      </SlideFade>
+    </Box>
+  );
+};
 
 const responsiveChecks = {
   base: 0.65,
@@ -57,19 +94,34 @@ const PortfolioSection = () => {
             <Box
               h="100%"
               bg={inViewport ? "#fff" : "#0c0c0c"}
-              transition="all 500ms"
+              transition="bg 1000ms"
             >
               <Box
                 h="100%"
                 d="flex"
                 justifyContent="center"
                 alignItems="center"
-                transition="all 1500ms"
+                transition="opacity 1000ms"
                 opacity={inViewport ? 1 : 0}
               >
-                <Text color="black" onClick={() => alert("hey")}>
-                  Hello World
-                </Text>
+                <Stories
+                  stories={[
+                    {
+                      url: react_logo,
+                      seeMore: SeeMore,
+                    },
+                    {
+                      url: gatsby_logo,
+                      seeMore: SeeMore,
+                    },
+                  ]}
+                  storyContainerStyles={{
+                    paddingTop: variant <= responsiveChecks.base ? "10%" : 0,
+                  }}
+                  width="100%"
+                  height="100%"
+                  loop
+                />
               </Box>
             </Box>
           </Device>
