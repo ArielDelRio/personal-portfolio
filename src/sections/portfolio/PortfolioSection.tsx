@@ -5,12 +5,15 @@ import {
   Center,
   Divider,
   Heading,
+  Image,
   SlideFade,
+  Text,
   useBreakpointValue,
   useDisclosure,
 } from "@chakra-ui/react";
-import { Device, DeviceProps } from "../../components";
+import { Device, DeviceProps, Project, Swiper } from "../../components";
 import { useInViewport } from "react-in-viewport";
+import Projects from "./projects";
 import react_logo from "../../images/skill_logos/react.svg";
 import gatsby_logo from "../../images/skill_logos/git.svg";
 
@@ -94,7 +97,7 @@ const PortfolioSection = () => {
             <Box
               h="100%"
               bg={inViewport ? "#fff" : "#0c0c0c"}
-              transition="bg 1000ms"
+              transition="background 1000ms"
             >
               <Box
                 h="100%"
@@ -104,7 +107,18 @@ const PortfolioSection = () => {
                 transition="opacity 1000ms"
                 opacity={inViewport ? 1 : 0}
               >
-                <Stories
+                <Swiper>
+                  {Projects.map((project) => (
+                    <Project
+                      key={project.id}
+                      id={project.id}
+                      name={project.name}
+                      urlLink={project.repo_link}
+                      urlPreview={project.main_img}
+                    />
+                  ))}
+                </Swiper>
+                {/* <Stories
                   stories={[
                     {
                       url: react_logo,
@@ -121,7 +135,7 @@ const PortfolioSection = () => {
                   width="100%"
                   height="100%"
                   loop
-                />
+                /> */}
               </Box>
             </Box>
           </Device>
