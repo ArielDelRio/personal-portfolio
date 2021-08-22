@@ -18,15 +18,16 @@ SwiperCore.use([
   Scrollbar,
   A11y,
   Autoplay,
-  Parallax,
   EffectCoverflow,
 ]);
 
-export const CustomSwiper = ({ children }) => {
+export const CustomSwiper = ({ children, initialSlide }) => {
   return (
     <Swiper
+      initialSlide={initialSlide || 0}
       style={{
-        paddingBottom: "20px",
+        paddingTop: "10vh",
+        paddingBottom: "10vh",
       }}
       speed={800}
       spaceBetween={50}
@@ -38,26 +39,27 @@ export const CustomSwiper = ({ children }) => {
         },
       }}
       effect={"coverflow"}
-      parallax
-      navigation
       pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
-      autoplay={{
-        delay: 1500,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-      }}
+      // autoplay={{
+      //   delay: 1000,
+      //   disableOnInteraction: false,
+      //   pauseOnMouseEnter: true,
+      // }}
       watchSlidesVisibility
       centeredSlides
-      grabCursor
       loop
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
     >
       {children.map((child) => (
-        <SwiperSlide key={child.props.id}>
+        <SwiperSlide key={child.key}>
           {({ isActive, isVisible }) => (
-            <div style={{ transform: isActive ? "scale(1.1)" : "scale(1)" }}>
+            <div
+              style={{
+                filter: isActive ? "none" : "blur(4px) grayscale(1)",
+                transition: "filter 400ms ease-in-out",
+              }}
+            >
               {child}
             </div>
           )}

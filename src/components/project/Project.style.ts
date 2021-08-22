@@ -1,11 +1,20 @@
 import styled from "styled-components";
 
-export const ProjectContainer = styled.a`
-  border-radius: 10px;
-  border: 2px solid whitesmoke;
+export const ProjectContainer = styled.div`
+  background-color: rgba(255, 255, 255, 0.24);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+
+  &.open{
+    transform: scale(1.4);
+  }
+
+
+  /* border: 2px solid whitesmoke;
   outline-style: none;
-  background-color: #323232;
   text-decoration: none;
   color: #000;
   overflow: hidden;
@@ -24,7 +33,7 @@ export const ProjectContainer = styled.a`
   }
   @media (max-width: 640px) {
     width: 250px;
-  }
+  } */
 `;
 
 export const PreviewProject = styled.img`

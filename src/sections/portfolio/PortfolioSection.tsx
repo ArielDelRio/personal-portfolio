@@ -11,11 +11,22 @@ import {
   useBreakpointValue,
   useDisclosure,
 } from "@chakra-ui/react";
-import { Device, DeviceProps, Project, Swiper } from "../../components";
+import {
+  Device,
+  DeviceProps,
+  Project,
+  ProjectProps,
+  Swiper,
+} from "../../components";
 import { useInViewport } from "react-in-viewport";
 import Projects from "./projects";
 import react_logo from "../../images/skill_logos/react.svg";
 import gatsby_logo from "../../images/skill_logos/git.svg";
+
+interface ProjectDataState {
+  selectedProject: ProjectProps;
+  lastSelectedProjectId: number;
+}
 
 const SeeMore = ({ close }) => {
   const { isOpen, onToggle } = useDisclosure({ defaultIsOpen: true });
@@ -68,6 +79,10 @@ const PortfolioSection = () => {
   );
 
   const [device, setDevice] = useState<DeviceProps>({ type: "MACBOOK" });
+  const [projectData, setProjectData] = useState<ProjectDataState>({
+    selectedProject: null,
+    lastSelectedProjectId: 0,
+  });
 
   useEffect(() => {
     if (variant <= responsiveChecks.base) setDevice({ type: "IPHONEX" });
@@ -104,20 +119,33 @@ const PortfolioSection = () => {
                 d="flex"
                 justifyContent="center"
                 alignItems="center"
-                transition="opacity 1000ms"
+                transition="opacity 1s, visibility 0.5s"
                 opacity={inViewport ? 1 : 0}
+                visibility={inViewport ? "visible": "hidden"}
               >
-                <Swiper>
-                  {Projects.map((project) => (
-                    <Project
-                      key={project.id}
-                      id={project.id}
-                      name={project.name}
-                      urlLink={project.repo_link}
-                      urlPreview={project.main_img}
-                    />
-                  ))}
-                </Swiper>
+                {!projectData.selectedProject ? (
+                  <Swiper initialSlide={projectData.lastSelectedProjectId}>
+                    {Projects.map((project) => (
+                      <div
+                        key={project.id}
+                        onClick={() =>
+                          setProjectData({
+                            selectedProject: project,
+                            lastSelectedProjectId: project.id,
+                          })
+                        }
+                      >
+                        <Project {...project} />
+                      </div>
+                    ))}
+                  </Swiper>
+                ) : (
+                  <Project
+                    closeSelectedProject={() => setProjectData({...projectData, selectedProject: null})}
+                    fullView
+                    {...projectData.selectedProject}
+                  />
+                )}
                 {/* <Stories
                   stories={[
                     {
@@ -142,7 +170,7 @@ const PortfolioSection = () => {
           <Divider
             ref={myRef}
             color="white"
-            height="50px"
+            height="10px"
             orientation="horizontal"
           />
         </Box>
