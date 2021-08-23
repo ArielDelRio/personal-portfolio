@@ -1,6 +1,10 @@
 import { Box, Image, ScaleFade, Text } from "@chakra-ui/react";
 import React from "react";
-import { ProjectContainer, ProjectTitle } from "./Project.style";
+import {
+  PreviewProject,
+  ProjectContainer,
+  ProjectTitle,
+} from "./Project.style";
 import { CloseButton } from "@chakra-ui/react";
 
 export interface ProjectProps {
@@ -26,32 +30,34 @@ const Project: React.FC<ProjectProps> = ({
 }) => {
   return !fullView ? (
     <ProjectContainer className="project-container">
-      <Image src={main_img} />
-      <Box bg="whiteAlpha.400">
-        <ProjectTitle>{name}</ProjectTitle>
-      </Box>
+      <PreviewProject src={main_img} alt={`${name} image`} />
+      <ProjectTitle>{name}</ProjectTitle>
     </ProjectContainer>
   ) : (
-      <ScaleFade initialScale={0} in={fullView} style={{width: "100%", height: "100%"}}>
-        <Box
-          d="flex"
-          justifyContent="center"
-          alignItems="center"
-          h="100%"
-          w="100%"
-          bg="gray.800"
-          color="white"
-        >
-          <CloseButton
-            position="absolute"
-            top="5"
-            right="5"
-            size="lg"
-            onClick={closeSelectedProject}
-          />
-          {name}
-        </Box>
-      </ScaleFade>
+    <ScaleFade
+      initialScale={0}
+      in={fullView}
+      style={{ width: "100%", height: "100%" }}
+    >
+      <Box
+        d="flex"
+        justifyContent="center"
+        alignItems="center"
+        h="100%"
+        w="100%"
+        bg="gray.800"
+        color="white"
+      >
+        <CloseButton
+          position="absolute"
+          top="5"
+          right="5"
+          size="lg"
+          onClick={closeSelectedProject}
+        />
+        {name}
+      </Box>
+    </ScaleFade>
   );
 };
 

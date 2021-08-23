@@ -126,7 +126,7 @@ const PortfolioSection = () => {
                 {!projectData.selectedProject ? (
                   <Swiper initialSlide={projectData.lastSelectedProjectId}>
                     {Projects.map((project) => (
-                      <div
+                      <Box
                         key={project.id}
                         onClick={() =>
                           setProjectData({
@@ -136,7 +136,7 @@ const PortfolioSection = () => {
                         }
                       >
                         <Project {...project} />
-                      </div>
+                      </Box>
                     ))}
                   </Swiper>
                 ) : (

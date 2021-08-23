@@ -48,8 +48,6 @@ export const CustomSwiper = ({ children, initialSlide }) => {
       watchSlidesVisibility
       centeredSlides
       loop
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
     >
       {children.map((child) => (
         <SwiperSlide key={child.key}>
