@@ -39,12 +39,15 @@ export const CustomSwiper = ({ children, initialSlide }) => {
         },
       }}
       effect={"coverflow"}
+      coverflowEffect= {{
+        slideShadows: false,
+      }}
       pagination={{ clickable: true }}
-      // autoplay={{
-      //   delay: 1000,
-      //   disableOnInteraction: false,
-      //   pauseOnMouseEnter: true,
-      // }}
+      autoplay={{
+        delay: 1000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      }}
       watchSlidesVisibility
       centeredSlides
       loop

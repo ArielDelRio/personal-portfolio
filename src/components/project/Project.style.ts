@@ -19,9 +19,10 @@ export const ProjectContainer = styled.div`
     transform: translateY(-10px);
   }
   @media (max-width: 991px) {
-    height: 40vh;    
+    height: 45vh;    
   }
   @media (max-width: 768px) {
+    height: 80vh;    
     margin: 0 5%;
   }
 `;
