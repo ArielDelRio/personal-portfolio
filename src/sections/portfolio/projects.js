@@ -14,6 +14,10 @@ const Projects = [
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae eos odio provident corporis expedita quisquam. Voluptates qui praesentium corporis alias, voluptatum, consectetur deserunt maxime laborum, sapiente ipsam expedita! Tempora, aperiam.",
     project_link: "https://project.link",
     repo_link: "https://repo.link",
+    stories: [
+      { url: react_image_path, description: "Description of project 1" },
+      { url: git_image_path, description: "Description of project 1.2" },
+    ],
   },
   {
     id: 1,
@@ -23,6 +27,10 @@ const Projects = [
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae eos odio provident corporis expedita quisquam. Voluptates qui praesentium corporis alias, voluptatum, consectetur deserunt maxime laborum, sapiente ipsam expedita! Tempora, aperiam.",
     project_link: "https://project.link",
     repo_link: "https://repo.link",
+    stories: [
+      { url: react_image_path, description: "Description of project 2" },
+      { url: gatsby_image_path, description: "Description of project 2.2" },
+    ],
   },
   {
     id: 2,

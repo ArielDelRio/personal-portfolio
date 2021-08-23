@@ -1,13 +1,9 @@
 import React, { useEffect, useState, useRef } from "react";
-import Stories from "react-insta-stories";
 import {
   Box,
   Center,
   Divider,
   Heading,
-  Image,
-  SlideFade,
-  Text,
   useBreakpointValue,
   useDisclosure,
 } from "@chakra-ui/react";
@@ -20,40 +16,11 @@ import {
 } from "../../components";
 import { useInViewport } from "react-in-viewport";
 import Projects from "./projects";
-import react_logo from "../../images/skill_logos/react.svg";
-import gatsby_logo from "../../images/skill_logos/git.svg";
 
 interface ProjectDataState {
   selectedProject: ProjectProps;
   lastSelectedProjectId: number;
 }
-
-const SeeMore = ({ close }) => {
-  const { isOpen, onToggle } = useDisclosure({ defaultIsOpen: true });
-  const handleClick = () => {
-    onToggle();
-    close();
-  };
-  return (
-    <Box h="100%" onClick={handleClick} d="flex" flexDirection="column-reverse">
-      <SlideFade in={isOpen}>
-        <Box
-          p="40px"
-          color="white"
-          mt="4"
-          bg="teal.500"
-          rounded="md"
-          shadow="md"
-        >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
-          fugit aut! Tempora sed maxime natus non temporibus excepturi sequi
-          architecto suscipit harum, quasi, eum, id nihil necessitatibus laborum
-          illum veniam?
-        </Box>
-      </SlideFade>
-    </Box>
-  );
-};
 
 const responsiveChecks = {
   base: 0.65,
@@ -121,7 +88,7 @@ const PortfolioSection = () => {
                 alignItems="center"
                 transition="opacity 1s, visibility 0.5s"
                 opacity={inViewport ? 1 : 0}
-                visibility={inViewport ? "visible": "hidden"}
+                visibility={inViewport ? "visible" : "hidden"}
               >
                 {!projectData.selectedProject ? (
                   <Swiper initialSlide={projectData.lastSelectedProjectId}>
@@ -141,29 +108,14 @@ const PortfolioSection = () => {
                   </Swiper>
                 ) : (
                   <Project
-                    closeSelectedProject={() => setProjectData({...projectData, selectedProject: null})}
+                    closeSelectedProject={() =>
+                      setProjectData({ ...projectData, selectedProject: null })
+                    }
                     fullView
+                    stories={projectData.selectedProject.stories}
                     {...projectData.selectedProject}
                   />
                 )}
-                {/* <Stories
-                  stories={[
-                    {
-                      url: react_logo,
-                      seeMore: SeeMore,
-                    },
-                    {
-                      url: gatsby_logo,
-                      seeMore: SeeMore,
-                    },
-                  ]}
-                  storyContainerStyles={{
-                    paddingTop: variant <= responsiveChecks.base ? "10%" : 0,
-                  }}
-                  width="100%"
-                  height="100%"
-                  loop
-                /> */}
               </Box>
             </Box>
           </Device>
