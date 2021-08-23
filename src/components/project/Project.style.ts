@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ProjectContainer = styled.div`
-  height: 60vh;
+  height: 50vh;
   background-color: rgba(255, 255, 255, 0.24);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px;
@@ -19,10 +19,10 @@ export const ProjectContainer = styled.div`
     transform: translateY(-10px);
   }
   @media (max-width: 991px) {
-    height: 45vh;    
+    height: 45vh;
   }
   @media (max-width: 768px) {
-    height: 65vh;    
+    height: 65vh;
     margin: 0 5%;
   }
 `;

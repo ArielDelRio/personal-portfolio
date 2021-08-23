@@ -39,7 +39,7 @@ export const CustomSwiper = ({ children, initialSlide }) => {
         },
       }}
       effect={"coverflow"}
-      coverflowEffect= {{
+      coverflowEffect={{
         slideShadows: false,
       }}
       pagination={{ clickable: true }}
