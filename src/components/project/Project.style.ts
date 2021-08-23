@@ -22,7 +22,7 @@ export const ProjectContainer = styled.div`
     height: 45vh;    
   }
   @media (max-width: 768px) {
-    height: 80vh;    
+    height: 65vh;    
     margin: 0 5%;
   }
 `;
