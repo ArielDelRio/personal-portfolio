@@ -21,6 +21,7 @@
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
     "babel-plugin-styled-components": "^1.13.2",
+    "formik": "^2.2.9",
     "framer-motion": "^4.1.17",
     "gatsby": "^3.10.2",
     "gatsby-plugin-anchor-links": "^1.2.1",
