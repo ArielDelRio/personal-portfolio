@@ -1,6 +1,11 @@
 import * as React from "react";
 import { Navbar } from "../components";
-import { HeroSection, AboutMeSection, SkillsSection } from "../sections";
+import {
+  HeroSection,
+  AboutMeSection,
+  SkillsSection,
+  PersonalPortfolio,
+} from "../sections";
 
 const IndexPage = () => {
   return (
@@ -9,6 +14,7 @@ const IndexPage = () => {
       <HeroSection />
       <AboutMeSection />
       <SkillsSection />
+      <PersonalPortfolio />
     </div>
   );
 };
