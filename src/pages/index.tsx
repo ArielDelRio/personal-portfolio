@@ -4,7 +4,8 @@ import {
   HeroSection,
   AboutMeSection,
   SkillsSection,
-  PersonalPortfolio,
+  PortfolioSection,
+  ContactSection,
 } from "../sections";
 
 const IndexPage = () => {
@@ -14,7 +15,8 @@ const IndexPage = () => {
       <HeroSection />
       <AboutMeSection />
       <SkillsSection />
-      <PersonalPortfolio />
+      <PortfolioSection />
+      <ContactSection />
     </div>
   );
 };
