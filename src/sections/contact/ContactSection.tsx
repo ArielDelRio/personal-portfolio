@@ -1,8 +1,10 @@
+import React, { useRef } from "react";
 import {
   Box,
   Button,
   Center,
   FormControl,
+  FormErrorMessage,
   FormLabel,
   Heading,
   Input,
@@ -10,9 +12,37 @@ import {
   Textarea,
   VStack,
 } from "@chakra-ui/react";
-import React from "react";
+import { useFormik } from "formik";
 
 const ContactSection = () => {
+  const formEl = useRef(null);
+
+  const validate = (values) => {
+    const errors = {};
+    if (!values.name) {
+      errors["name"] = "Required";
+    }
+    if (!values.email) {
+      errors["email"] = "Required";
+    }
+    return errors;
+  };
+
+  const handleSubmit = (values, action) => {
+    formEl.current.submit();
+  };
+
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+    },
+    validate,
+    onSubmit: handleSubmit,
+  });
+
   return (
     <Box
       minH="100vh"
@@ -39,10 +69,22 @@ const ContactSection = () => {
         </Text>
       </Center>
       <Center py="10">
-        <Box as="form" w={{ base: "80vw", md: "40vw" }}>
+        <Box
+          ref={formEl}
+          as="form"
+          method="post"
+          action="https://getform.io/f/613b4554-5899-4096-a75d-226a26741746"
+          onSubmit={() => formik.handleSubmit()}
+          w={{ base: "80vw", md: "40vw" }}
+        >
           <VStack spacing="6">
-            <FormControl id="first-name" isRequired>
+            <FormControl
+              isInvalid={formik.errors.name && formik.touched.name}
+              isRequired
+            >
               <Input
+                id="name"
+                name="name"
                 variant="unstyled"
                 size="lg"
                 p="2"
@@ -50,10 +92,19 @@ const ContactSection = () => {
                 borderBottom="4px solid #000"
                 borderRadius="0"
                 placeholder="Enter your name*"
+                value={formik.values.name}
+                onChange={formik.handleChange}
               />
+              <FormErrorMessage>{formik.errors.name}</FormErrorMessage>
             </FormControl>
-            <FormControl id="email" isRequired>
+
+            <FormControl
+              isInvalid={formik.errors.email && formik.touched.email}
+              isRequired
+            >
               <Input
+                id="email"
+                name="email"
                 type="email"
                 variant="unstyled"
                 size="lg"
@@ -62,10 +113,18 @@ const ContactSection = () => {
                 borderBottom="4px solid #000"
                 borderRadius="0"
                 placeholder="Enter your email*"
+                value={formik.values.email}
+                onChange={formik.handleChange}
               />
+              <FormErrorMessage>{formik.errors.email}</FormErrorMessage>
             </FormControl>
-            <FormControl id="phone">
+
+            <FormControl
+              isInvalid={formik.errors.phone && formik.touched.phone}
+            >
               <Input
+                id="phone"
+                name="phone"
                 type="tel"
                 variant="unstyled"
                 size="lg"
@@ -74,10 +133,19 @@ const ContactSection = () => {
                 borderBottom="4px solid #000"
                 borderRadius="0"
                 placeholder="Phone Number"
+                value={formik.values.phone}
+                onChange={formik.handleChange}
               />
+              <FormErrorMessage>{formik.errors.phone}</FormErrorMessage>
             </FormControl>
-            <FormControl id="message" isRequired>
+
+            <FormControl
+              isInvalid={formik.errors.message && formik.touched.message}
+              isRequired
+            >
               <Textarea
+                id="message"
+                name="message"
                 variant="unstyled"
                 size="lg"
                 p="2"
@@ -85,23 +153,30 @@ const ContactSection = () => {
                 borderBottom="4px solid #000"
                 borderRadius="0"
                 placeholder="Your Message*"
+                value={formik.values.message}
+                onChange={formik.handleChange}
               />
+              <FormErrorMessage>{formik.errors.message}</FormErrorMessage>
             </FormControl>
-            <Box>
-              <Button
-                // isLoading
-                type="submit"
-                mt={{ md: "3em" }}
-                size="lg"
-                bg="transparent"
-                loadingText="Submitting"
-                borderX="4px solid #000"
-                borderRadius="0"
-                fontWeight="bold"
-              >
-                SUBMIT
-              </Button>
-            </Box>
+            <Button
+              isLoading={formik.isSubmitting}
+              type="submit"
+              mt={{ md: "3em" }}
+              size="lg"
+              bg="transparent"
+              loadingText="Submitting"
+              borderX="4px solid #000"
+              borderRadius="0"
+              fontWeight="bold"
+              transition="all 700ms"
+              _hover={{
+                px: "5em",
+                bg: "blackAlpha.400",
+                color: "#000",
+              }}
+            >
+              SUBMIT
+            </Button>
           </VStack>
         </Box>
       </Center>
