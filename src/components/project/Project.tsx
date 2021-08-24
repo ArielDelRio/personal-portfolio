@@ -45,7 +45,7 @@ const Project: React.FC<ProjectProps> = ({
   closeSelectedProject,
 }) => {
   const [showStories, setShowStories] = useBoolean();
-  console.log(stories);
+
   return !fullView ? (
     <ProjectContainer className="project-container">
       <PreviewProject src={main_img} alt={`${name} image`} />
@@ -91,6 +91,8 @@ const Project: React.FC<ProjectProps> = ({
               <Button
                 isDisabled={!stories}
                 size="md"
+                shadow="lg"
+                border="1px solid #fff"
                 rounded="full"
                 position="absolute"
                 top={{ base: "initial", md: "5" }}
@@ -98,7 +100,7 @@ const Project: React.FC<ProjectProps> = ({
                 variant="solid"
                 colorScheme="whatsapp"
                 fontSize={{ base: "1.2em", md: "2em" }}
-                h={{ base: "6%", md: "8%", lg: "10%" }}
+                h={{ base: "6%", md: "8%", lg: "11%" }}
                 onClick={setShowStories.on}
               >
                 <FaEye />
@@ -111,7 +113,7 @@ const Project: React.FC<ProjectProps> = ({
               alignItems="center"
               flexDirection="column"
             >
-              <Heading as="h2">
+              <Heading as="h2" fontFamily="body">
                 <Box as="span" color="orange.400">
                   {"<"}
                 </Box>
@@ -145,7 +147,7 @@ const Project: React.FC<ProjectProps> = ({
             </Box>
           </Box>
           <Divider color="white" height="10px" orientation="horizontal" />
-          <Box h="50%" mt="6" mx={{ base: 6, md: 10 }}>
+          <Box h={{ base: "40%", md: "50%" }} mt="6" mx={{ base: 6, md: 10 }}>
             <Text fontSize="xl">{description}</Text>
           </Box>
         </Box>
