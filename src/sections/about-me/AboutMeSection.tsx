@@ -4,7 +4,7 @@ import logo_text_img from "../../images/logo_text.svg";
 
 const AboutMeSection = () => {
   return (
-    <Box minH="30vh" bg="#1D1D1D" color="white" p="8">
+    <Box minH="30vh" bg="#1D1D1D" color="white" p="10">
       <Container maxW="container.xl">
         <Heading as="h2" id="about-me" fontFamily="Roboto">
           About me
