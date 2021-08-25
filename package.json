@@ -17,8 +17,11 @@
   "dependencies": {
     "@chakra-ui/gatsby-plugin": "^2.0.1",
     "@chakra-ui/react": "^1.6.6",
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
     "babel-plugin-styled-components": "^1.13.2",
     "formik": "^2.2.9",
+    "framer-motion": "^4.1.17",
     "gatsby": "^3.10.2",
     "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-google-fonts": "^1.0.1",
