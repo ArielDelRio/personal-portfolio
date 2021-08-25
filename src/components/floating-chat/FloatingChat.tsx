@@ -11,7 +11,8 @@ const FloatingChat = () => (
       phoneNumber="+5358377336"
       accountName="ArieldRio"
       avatar={logo}
-      chatMessage="Hello, what's up 😀, text me and we'll get in touch quickly."
+      chatMessage="Hello there! 🤝
+      How can I help?"
       darkMode
       allowClickAway
       allowEsc
