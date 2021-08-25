@@ -58,12 +58,10 @@ const Project: React.FC<ProjectProps> = ({
       style={{ width: "100%", height: "100%" }}
     >
       {showStories ? (
-        <SlideFade in={showStories} style={{ height: "100%" }}>
-          <CustomStories
-            stories={stories}
-            handleCloseStory={setShowStories.off}
-          />
-        </SlideFade>
+        <CustomStories
+          stories={stories}
+          handleCloseStory={setShowStories.off}
+        />
       ) : (
         <Box
           d="flex"

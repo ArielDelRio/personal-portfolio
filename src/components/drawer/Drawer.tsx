@@ -9,13 +9,20 @@ import {
   DrawerCloseButton,
   Button,
 } from "@chakra-ui/react";
-import { HamburgerIcon } from "@chakra-ui/icons";
+import { FaBars } from "react-icons/fa";
 
 const CustomDrawer = ({ isOpen, onOpen, onClose, children }) => {
   return (
     <>
-      <Button colorScheme="whiteAlpha" variant="ghost" onClick={onOpen}>
-        <HamburgerIcon color={{ base: "black", md: "white" }} w={10} h={10} />
+      <Button
+        colorScheme="whiteAlpha"
+        variant="ghost"
+        color={{ base: "black", md: "white" }}
+        onClick={onOpen}
+        fontSize="2em"
+        alignSelf="center"
+      >
+        <FaBars />
       </Button>
 
       <Drawer

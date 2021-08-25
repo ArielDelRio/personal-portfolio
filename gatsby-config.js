@@ -19,12 +19,17 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: "gatsby-plugin-google-fonts",
       options: {
         fonts: [`Roboto`, `Dancing Script`, `Style Script`],
         display: "swap",
       },
     },
-    `gatsby-plugin-anchor-links`,
+    {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -40,
+      },
+    },
   ],
 };

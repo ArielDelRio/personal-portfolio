@@ -34,7 +34,7 @@ const Navbar = () => {
             </Heading>
           </Box>
           <Spacer />
-          <Box>
+          <Box alignSelf="center">
             {isLargerThan1280 ? (
               <HStack spacing="16">
                 {NavItems.map((item) => (
