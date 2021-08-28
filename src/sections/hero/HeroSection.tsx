@@ -75,7 +75,7 @@ const HeroSection = () => {
         </Box>
         <Box d="flex" flexDirection="column" pt="8">
           <Stack direction="row" spacing={4}>
-            <Link to="#">
+            <a href="mailto:arieldelrioviamonte@email.com">
               <Button
                 bg="blackAlpha.400"
                 color="black"
@@ -86,8 +86,8 @@ const HeroSection = () => {
               >
                 <Icon as={FaAt} w={6} h={6} />
               </Button>
-            </Link>
-            <Link to="#">
+            </a>
+            <Link to="https://github.com/ArielDelRio" target="_blank">
               <Button
                 bg="blackAlpha.400"
                 color="black"
@@ -99,7 +99,7 @@ const HeroSection = () => {
                 <Icon as={FaGithub} w={6} h={6} />
               </Button>
             </Link>
-            <Link to="#">
+            <Link to="https://www.linkedin.com/in/ariel-del-rio-94b34a185/" target="_blank">
               <Button
                 bg="blackAlpha.400"
                 color="black"
@@ -113,6 +113,9 @@ const HeroSection = () => {
             </Link>
           </Stack>
           <Button
+            as="a"
+            href="../../../ArieldRioDev_Resume.txt"
+            download
             w="28"
             h="12"
             mt="4"
