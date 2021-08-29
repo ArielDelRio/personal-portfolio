@@ -23,7 +23,7 @@ const HeroSection = () => {
         h={{ base: "60vh", md: "100vh" }}
         fontFamily="Roboto"
       >
-        <Box mt="14">
+        <Box mt={{base: "20", md: "16"}}>
           <Text
             fontSize={{ base: "3xl", md: "xx-large" }}
             fontWeight="bold"
@@ -73,7 +73,7 @@ const HeroSection = () => {
             </Text>
           </TagText>
         </Box>
-        <Box d="flex" flexDirection="column" pt="8">
+        <Box d="flex" flexDirection="column" pt="4">
           <Stack direction="row" spacing={4}>
             <a href="mailto:arieldelrioviamonte@email.com">
               <Button
