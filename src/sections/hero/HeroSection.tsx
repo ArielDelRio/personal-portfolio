@@ -4,7 +4,7 @@ import { Box, Flex, Text, Button, Stack, Icon, Image } from "@chakra-ui/react";
 import Typical from "react-typical";
 import { FaAt, FaFileDownload, FaGithub, FaLinkedin } from "react-icons/fa";
 import { TagText } from "../../components";
-import pana_img from "../../images/pana.svg";
+import { PanaSvg } from "./HeroSection.style";
 
 const HeroSection = () => {
   return (
@@ -87,7 +87,7 @@ const HeroSection = () => {
                 <Icon as={FaAt} w={6} h={6} />
               </Button>
             </a>
-            <Link to="https://github.com/ArielDelRio" target="_blank">
+            <a href="https://github.com/ArielDelRio" target="_blank">
               <Button
                 bg="blackAlpha.400"
                 color="black"
@@ -98,8 +98,8 @@ const HeroSection = () => {
               >
                 <Icon as={FaGithub} w={6} h={6} />
               </Button>
-            </Link>
-            <Link to="https://www.linkedin.com/in/ariel-del-rio-94b34a185/" target="_blank">
+            </a>
+            <a href="https://www.linkedin.com/in/ariel-del-rio-94b34a185/" target="_blank">
               <Button
                 bg="blackAlpha.400"
                 color="black"
@@ -110,7 +110,7 @@ const HeroSection = () => {
               >
                 <Icon as={FaLinkedin} w={6} h={6} />
               </Button>
-            </Link>
+            </a>
           </Stack>
           <Button
             as="a"
@@ -158,12 +158,12 @@ const HeroSection = () => {
           alignItems="center"
           mr="4"
         >
-          <Image
+            <PanaSvg  />
+           
+          {/* <Image
             src={pana_img}
             alt="Vector Image"
-            mt={{ md: 12 }}
-            h={{ base: "30vh", md: "auto" }}
-          />
+          /> */}
         </Box>
       </Box>
     </Flex>
