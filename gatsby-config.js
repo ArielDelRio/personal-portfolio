@@ -19,6 +19,32 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/, // See below to configure properly
+        },
+      },
+    },
+    "gatsby-plugin-image",
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        // // Defaults used for gatsbyImageData and StaticImage
+        // defaults: {},
+        // // Set to false to allow builds to continue on image errors
+        // failOnError: true,
+        // // deprecated options and their defaults:
+        // base64Width: 20,
+        // forceBase64Format: `png`, // valid formats: png,jpg,webp
+        // useMozJpeg: process.env.GATSBY_JPEG_ENCODER === `MOZJPEG`,
+        // stripMetadata: true,
+        // defaultQuality: 50,
+        icon: "src/images/gatsby-icon.png",
+      },
+    },
+    "gatsby-transformer-sharp",
+    {
       resolve: "gatsby-plugin-google-fonts",
       options: {
         fonts: [`Roboto`, `Dancing Script`, `Style Script`],
