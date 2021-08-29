@@ -1,20 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 import { useMediaQuery, useDisclosure } from "@chakra-ui/react";
 import {
   Box,
-  Button,
   Container,
   Flex,
   Heading,
   HStack,
-  Image,
   Spacer,
   Circle,
 } from "@chakra-ui/react";
 import { NavItem, ContactNavItem } from "./Navbar.style";
 import CustomDrawer from "../drawer/Drawer";
-import logo from "../../images/logo.png";
 import NavItems from "./NavItems.json";
 
 const Navbar = () => {
@@ -26,9 +24,15 @@ const Navbar = () => {
       <Container maxW="full">
         <Flex>
           <Box p="2">
-            <Heading size="md" d="flex" alignItems="baseline">
+            <Heading size="md" d="flex" alignItems="flex-end">
               <Link to="/">
-                <Image boxSize="50px" src={logo} alt="lOGO" />
+                <StaticImage
+                  src="../../images/logo.png"
+                  alt="ArieldRioDev Logo"
+                  placeholder="none"
+                  width={60}
+                  height={60}
+                />
               </Link>
               <Circle size="14px" bg="green.400"></Circle>
             </Heading>
