@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
     title: "Personal Portfolio",
+    description: "this is my personal portfolio",
+    siteUrl: "https://www.arieldriodev.gatsbyjs.io",
   },
   flags: {
     DEV_SSR: false,

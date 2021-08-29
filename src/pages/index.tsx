@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Footer, Navbar, FloatingChat } from "../components";
+import { Footer, Navbar, FloatingChat, Seo } from "../components";
 import {
   HeroSection,
   AboutMeSection,
@@ -11,6 +11,7 @@ import {
 const IndexPage = () => {
   return (
     <div>
+      <Seo />
       <Navbar />
       <HeroSection />
       <AboutMeSection />
