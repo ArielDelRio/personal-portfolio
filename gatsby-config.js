@@ -8,6 +8,19 @@ module.exports = {
     DEV_SSR: false,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `ArieldRioDev Personal Portfolio`,
+        short_name: `ArieldRioDev`,
+        start_url: `/`,
+        background_color: `#E5E5E5`,
+        theme_color: `#000`,
+        display: `standalone`,
+        icon: `src/images/icon.png`,
+      },
+    },
+    "gatsby-plugin-offline",
     "gatsby-plugin-styled-components",
     {
       resolve: "@chakra-ui/gatsby-plugin",
