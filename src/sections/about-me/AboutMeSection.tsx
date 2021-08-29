@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Container, Heading, Image, Text } from "@chakra-ui/react";
-import logo_text_img from "../../images/logo_text.svg";
+import { LogoText } from "./AboutMeSection.styles";
 
 const AboutMeSection = () => {
   return (
@@ -16,7 +16,7 @@ const AboutMeSection = () => {
           justifyContent="space-between"
           mt={{ base: 8, sm: "auto" }}
         >
-          <Text mr="8" noOfLines={[5, 0]}>
+          <Text mr="8" noOfLines={[5, 0]} w={{ base: "auto", sm: "80vw" }}>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo
             ipsam sapiente, labore error architecto expedita inventore nihil
             earum reprehenderit laboriosam distinctio, illum aliquam repellat
@@ -26,13 +26,7 @@ const AboutMeSection = () => {
             Voluptatibus quam blanditiis reprehenderit sed omnis atque animi
             laborum veniam recusandae fuga?
           </Text>
-          <Image
-            h={{ base: "20vh", sm: "30vh" }}
-            transform={"rotateZ(27deg)"}
-            src={logo_text_img}
-            alt="logo text"
-            alignSelf={{ base: "flex-end", sm: "flex-start" }}
-          />
+          <LogoText />
         </Box>
       </Container>
     </Box>
