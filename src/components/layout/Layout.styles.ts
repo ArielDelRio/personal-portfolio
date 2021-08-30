@@ -6,6 +6,26 @@ const GlobalStyle = createGlobalStyle`
   background-color: #000;
 }
 
+.zoom-in-out {
+    animation-name: zoomEffect;
+    animation-iteration-count: infinite;
+    animation-duration: 2000ms;
+    animation-play-state: running;
+
+
+    @keyframes zoomEffect {
+    0% {
+        transform: scale(.9, .9);
+    }
+    50% {
+        transform: scale(1, 1);
+    }
+    100% {
+        transform: scale(.9, .9);
+    }
+  }
+
+}
 
 body::-webkit-scrollbar-track {
 	border-radius: 5px;
