@@ -7,6 +7,7 @@ import Stories from "./stories/Stories";
 import Footer from "./footer/Footer";
 import FloatingChat from "./floating-chat/FloatingChat";
 import Seo from "./seo/Seo";
+import Layout from "./layout/Layout";
 
 export {
   Navbar,
@@ -20,4 +21,5 @@ export {
   Footer,
   FloatingChat,
   Seo,
+  Layout,
 };
