@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import { Link } from "gatsby";
 import { Box, Flex, Text, Button, Stack, Icon, Image } from "@chakra-ui/react";
 import Typical from "react-typical";
 import { FaAt, FaFileDownload, FaGithub, FaLinkedin } from "react-icons/fa";
@@ -19,11 +18,12 @@ const HeroSection = () => {
         flexDirection="column"
         alignItems="center"
         bgColor="#E5E5E5"
+        pt={{ base: "16", sm: "initial" }}
         w={{ md: "calc(50vw - 40px)" }}
         h={{ base: "60vh", md: "100vh" }}
         fontFamily="Roboto"
       >
-        <Box mt={{base: "20", md: "16"}}>
+        <Box>
           <Text
             fontSize={{ base: "3xl", md: "xx-large" }}
             fontWeight="bold"
@@ -34,7 +34,7 @@ const HeroSection = () => {
           <Text
             fontSize={{ base: "3xl", md: "5xl" }}
             mt="-2"
-            fontFamily="cursive"
+            fontFamily="Roboto"
           >
             Ariel Del Rio
           </Text>
@@ -99,7 +99,10 @@ const HeroSection = () => {
                 <Icon as={FaGithub} w={6} h={6} />
               </Button>
             </a>
-            <a href="https://www.linkedin.com/in/ariel-del-rio-94b34a185/" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/ariel-del-rio-94b34a185/"
+              target="_blank"
+            >
               <Button
                 bg="blackAlpha.400"
                 color="black"
@@ -158,12 +161,7 @@ const HeroSection = () => {
           alignItems="center"
           mr="4"
         >
-            <PanaSvg  />
-           
-          {/* <Image
-            src={pana_img}
-            alt="Vector Image"
-          /> */}
+          <PanaSvg />
         </Box>
       </Box>
     </Flex>

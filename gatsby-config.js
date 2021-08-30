@@ -70,7 +70,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-fonts",
       options: {
-        fonts: [`Roboto`, `Dancing Script`, `Style Script`],
+        fonts: [`Roboto`, `Dancing Script`],
         display: "swap",
       },
     },
