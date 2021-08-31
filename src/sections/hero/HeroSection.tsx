@@ -45,6 +45,7 @@ const HeroSection = () => {
           textAlign="center"
           color="blackAlpha.500"
           mt="-2"
+          mx="6"
         >
           Full-Stack Developer based on JS Technologies
         </Text>
@@ -117,7 +118,7 @@ const HeroSection = () => {
           </Stack>
           <Button
             as="a"
-            href="../../../ArieldRioDev_Resume.txt"
+            href="ArieldRioDev_Resume.txt"
             download
             w="28"
             h="12"
