@@ -1,7 +1,9 @@
 import React from "react";
-import { Box } from "@chakra-ui/react";
 import { StaticImage } from "gatsby-plugin-image";
-import { LoadingContainer } from "./SplashLoading.styles";
+import {
+  LoadingContainer,
+  SplashScreenContainer,
+} from "./SplashLoading.styles";
 
 interface SplashLoadingProps {
   endAnimation: boolean;
@@ -13,7 +15,7 @@ const SplashLoading: React.FC<SplashLoadingProps> = ({
   secondsToEndAnimation,
 }) => {
   return (
-    <Box h="100vh" display="flex" justifyContent="center" alignItems="center">
+    <SplashScreenContainer>
       <LoadingContainer
         endAnimation={endAnimation}
         secondsToEndAnimation={secondsToEndAnimation}
@@ -28,7 +30,7 @@ const SplashLoading: React.FC<SplashLoadingProps> = ({
           width={120}
         />
       </LoadingContainer>
-    </Box>
+    </SplashScreenContainer>
   );
 };
 

@@ -5,6 +5,14 @@ interface LoadingContainer {
   secondsToEndAnimation: number;
 }
 
+const SplashScreenContainer = styled.div`
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 const LoadingContainer = styled.div<LoadingContainer>`
   background-color: #e5e5e5;
   border-radius: 5px;
@@ -46,4 +54,4 @@ const LoadingContainer = styled.div<LoadingContainer>`
   }
 `;
 
-export { LoadingContainer };
+export { SplashScreenContainer, LoadingContainer };
