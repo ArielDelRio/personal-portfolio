@@ -6,30 +6,42 @@ import Seo from "../seo/Seo";
 import GlobalStyle from "./Layout.styles";
 import SplashLoading from "../splash-loading/SplashLoading";
 
+const maxSecondsToDelayLoading = 4;
+const secondsToEndAnimation = 1;
+
 const Layout = ({ children }) => {
   const [loading, setloading] = useState(true);
+  const [endAnimation, setEndAnimation] = useState(false);
 
   useEffect(() => {
-    const rand = Math.random() * 1000;
-    console.log(rand);
+    if (endAnimation) {
+      setTimeout(() => {
+        setloading(false);
+      }, secondsToEndAnimation * 1000);
+    }
+
+    const rand = Math.random() * maxSecondsToDelayLoading * 1000;
     setTimeout(() => {
-      setloading(false);
+      setEndAnimation(true);
     }, rand);
-  }, []);
+  }, [endAnimation]);
 
   return (
     <>
       <GlobalStyle />
+      <Seo />
       {!loading ? (
         <>
-          <Seo />
           <Navbar />
           {children}
           <FloatingChat />
           <Footer />
         </>
       ) : (
-        <SplashLoading />
+        <SplashLoading
+          endAnimation={endAnimation}
+          secondsToEndAnimation={secondsToEndAnimation}
+        />
       )}
     </>
   );

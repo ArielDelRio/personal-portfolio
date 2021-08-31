@@ -1,19 +1,33 @@
-import { Box, Image } from "@chakra-ui/react";
 import React from "react";
-import logo from "../../images/logo.png";
+import { Box } from "@chakra-ui/react";
+import { StaticImage } from "gatsby-plugin-image";
+import { LoadingContainer } from "./SplashLoading.styles";
 
-const SplashLoading = () => {
+interface SplashLoadingProps {
+  endAnimation: boolean;
+  secondsToEndAnimation: number;
+}
+
+const SplashLoading: React.FC<SplashLoadingProps> = ({
+  endAnimation,
+  secondsToEndAnimation,
+}) => {
   return (
     <Box h="100vh" display="flex" justifyContent="center" alignItems="center">
-      <Box
-        className="zoom-in-out"
-        shadow="md"
-        bg="gray.400"
-        borderRadius="5px"
-        p="4"
+      <LoadingContainer
+        endAnimation={endAnimation}
+        secondsToEndAnimation={secondsToEndAnimation}
       >
-        <Image src={logo} alt="ArieldRioDev Logo" boxSize="28" />
-      </Box>
+        <StaticImage
+          src="../../images/logo.png"
+          alt="ArieldRioDev Logo"
+          placeholder="none"
+          loading="eager"
+          layout="constrained"
+          height={120}
+          width={120}
+        />
+      </LoadingContainer>
     </Box>
   );
 };
