@@ -24,10 +24,9 @@ const SplashLoading: React.FC<SplashLoadingProps> = ({
           src="../../images/logo.png"
           alt="ArieldRioDev Logo"
           placeholder="none"
-          loading="eager"
-          layout="constrained"
-          height={120}
-          width={120}
+          layout="fixed"
+          height={100}
+          width={100}
         />
       </LoadingContainer>
     </SplashScreenContainer>
