@@ -4,6 +4,7 @@ import {
   LoadingContainer,
   SplashScreenContainer,
 } from "./SplashLoading.styles";
+import { Image } from "@chakra-ui/react";
 
 interface SplashLoadingProps {
   endAnimation: boolean;
@@ -20,13 +21,13 @@ const SplashLoading: React.FC<SplashLoadingProps> = ({
         endAnimation={endAnimation}
         secondsToEndAnimation={secondsToEndAnimation}
       >
-        <StaticImage
+        <Image
           src="../../images/logo.png"
           alt="ArieldRioDev Logo"
-          placeholder="none"
-          layout="fixed"
-          height={100}
-          width={100}
+          // placeholder="none"
+          // layout="fixed"
+          // height={100}
+          // width={100}
         />
       </LoadingContainer>
     </SplashScreenContainer>
