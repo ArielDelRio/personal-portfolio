@@ -16,15 +16,16 @@ const AboutMeSection = () => {
           justifyContent="space-between"
           mt={{ base: 8, sm: "auto" }}
         >
-          <Text mr="8" noOfLines={[5, 0]} w={{ base: "auto", sm: "80vw" }}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo
-            ipsam sapiente, labore error architecto expedita inventore nihil
-            earum reprehenderit laboriosam distinctio, illum aliquam repellat
-            corporis dolores consequatur sit dolor eos! Necessitatibus
-            accusantium aspernatur hic, laborum tempore cumque culpa quis vitae
-            illum voluptas rerum, recusandae perspiciatis nostrum quam amet.
-            Voluptatibus quam blanditiis reprehenderit sed omnis atque animi
-            laborum veniam recusandae fuga?
+          <Text
+            fontSize="large"
+            mr="8"
+            noOfLines={[5, 0]}
+            w={{ base: "auto", sm: "80vw" }}
+          >
+            I am a young professional with a passion for his work and excellent
+            organizational skills. With ease of adaptation to changing
+            environments and clear goal orientation. I would like to develop
+            professionally as a web and mobile developer.
           </Text>
           <LogoText />
         </Box>
