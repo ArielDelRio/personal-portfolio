@@ -1,14 +1,39 @@
 import styled from "styled-components";
-import LogoSvg from "../../assets/logo_text.svg";
+import LogoSvg from "../../assets/avatar_about_me.svg";
 
-const LogoText = styled(LogoSvg)`
-    height: 20vh;
-    width:  20vw;
-    transform: rotateZ(27deg);
-    @media (max-width: 768px) {
-    height: 20vh;
-    width: auto;
+const Avatar = styled(LogoSvg)`
+  height: 10vh;
+  width: auto;
+  margin-right: 3em;
+  margin-left: 3em;
+  cursor: pointer;
+
+  transition: filter 300ms;
+  filter: ${(props) => (props.active ? "brightness(1)" : "brightness(0.4)")};
+
+  animation: ${(props) =>
+    `float infinite 20s ${props.active ? "running" : "paused"}`};
+  @media (max-width: 768px) {
+    margin-top: 3em;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translate(80px, -20px) rotateZ(27deg);
+    }
+    20% {
+      transform: translate(40px, 20px) rotateZ(-27deg);
+    }
+    50% {
+      transform: translate(-40px, -20px) rotateZ(27deg);
+    }
+    80% {
+      transform: translate(0px, 0px) rotateZ(-27deg);
+    }
+    100% {
+      transform: translate(80px, -20px) rotateZ(27deg);
+    }
   }
 `;
 
-export { LogoText };
+export { Avatar };

@@ -1,8 +1,10 @@
-import React from "react";
-import { Box, Container, Heading, Image, Text } from "@chakra-ui/react";
-import { LogoText } from "./AboutMeSection.styles";
+import React, { useState } from "react";
+import { Box, Container, Heading, Text } from "@chakra-ui/react";
+import { Avatar } from "./AboutMeSection.styles";
 
 const AboutMeSection = () => {
+  const [active, setActive] = useState(true);
+
   return (
     <Box minH="30vh" bg="#1D1D1D" color="white" p="10">
       <Container maxW="container.xl">
@@ -18,7 +20,6 @@ const AboutMeSection = () => {
         >
           <Text
             fontSize="large"
-            mr="8"
             noOfLines={[5, 0]}
             w={{ base: "auto", sm: "80vw" }}
           >
@@ -27,7 +28,7 @@ const AboutMeSection = () => {
             environments and clear goal orientation. I would like to develop
             professionally as a web and mobile developer.
           </Text>
-          <LogoText />
+          <Avatar active={active} onClick={() => setActive(!active)} />
         </Box>
       </Container>
     </Box>
