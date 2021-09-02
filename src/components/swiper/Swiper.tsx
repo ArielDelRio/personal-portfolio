@@ -26,7 +26,6 @@ export const CustomSwiper = ({ children, initialSlide, autoplay }) => {
   const swiperRef = useRef(null);
 
   useEffect(() => {
-    console.log(autoplay);
     autoplay
       ? swiperRef.current.swiper.autoplay.start()
       : swiperRef.current.swiper.autoplay.stop();
