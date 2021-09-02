@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Box, Container, Heading, Text } from "@chakra-ui/react";
-import { Avatar } from "./AboutMeSection.styles";
+import { AvatarWrapper, Avatar } from "./AboutMeSection.styles";
 
 const AboutMeSection = () => {
   const [active, setActive] = useState(true);
@@ -28,7 +28,9 @@ const AboutMeSection = () => {
             environments and clear goal orientation. I would like to develop
             professionally as a web and mobile developer.
           </Text>
-          <Avatar active={active} onClick={() => setActive(!active)} />
+          <AvatarWrapper active={active} onClick={() => setActive(!active)}>
+            <Avatar />
+          </AvatarWrapper>
         </Box>
       </Container>
     </Box>

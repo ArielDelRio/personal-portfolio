@@ -1,7 +1,11 @@
 import styled from "styled-components";
-import LogoSvg from "../../assets/avatar_about_me.svg";
+import AvatarSVG from "../../assets/avatar_about_me.svg";
 
-const Avatar = styled(LogoSvg)`
+interface AvatarProps {
+  active: boolean;
+}
+
+const AvatarWrapper = styled.div<AvatarProps>`
   height: 10vh;
   width: auto;
   margin-right: 3em;
@@ -36,4 +40,9 @@ const Avatar = styled(LogoSvg)`
   }
 `;
 
-export { Avatar };
+const Avatar = styled(AvatarSVG)`
+  width: inherit;
+  height: inherit;
+`;
+
+export { AvatarWrapper, Avatar };
