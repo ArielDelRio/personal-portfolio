@@ -91,7 +91,10 @@ const PortfolioSection = () => {
                 visibility={inViewport ? "visible" : "hidden"}
               >
                 {!projectData.selectedProject ? (
-                  <Swiper initialSlide={projectData.lastSelectedProjectId}>
+                  <Swiper
+                    initialSlide={projectData.lastSelectedProjectId}
+                    autoplay={inViewport}
+                  >
                     {Projects.map((project) => (
                       <Box
                         key={project.id}

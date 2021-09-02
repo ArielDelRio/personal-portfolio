@@ -7,7 +7,6 @@ import {
   HStack,
   Image,
   ScaleFade,
-  SlideFade,
   Text,
   useBoolean,
 } from "@chakra-ui/react";
