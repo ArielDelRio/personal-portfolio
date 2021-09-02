@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import Pana from "../../assets/pana.svg";
+import PanaSVG from "../../assets/pana.svg";
 
-const PanaSvg = styled(Pana)`
+const Pana = styled(PanaSVG)`
   height: 100vh;
   width: 100%;
   @media (max-width: 768px) {
@@ -9,4 +9,4 @@ const PanaSvg = styled(Pana)`
   }
 `;
 
-export { PanaSvg };
+export { Pana };
