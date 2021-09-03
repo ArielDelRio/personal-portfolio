@@ -8,6 +8,7 @@ import Footer from "./footer/Footer";
 import FloatingChat from "./floating-chat/FloatingChat";
 import Seo from "./seo/Seo";
 import Layout from "./layout/Layout";
+import Atom from "./atom/Atom";
 
 export {
   Navbar,
@@ -20,4 +21,5 @@ export {
   FloatingChat,
   Seo,
   Layout,
+  Atom,
 };

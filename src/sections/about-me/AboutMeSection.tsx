@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Atom } from "../../components";
 import { Box, Container, Heading, Text } from "@chakra-ui/react";
 import { AvatarWrapper, Avatar } from "./AboutMeSection.styles";
 
@@ -13,7 +14,7 @@ const AboutMeSection = () => {
         </Heading>
         <Box
           d="flex"
-          flexDirection={["column", "row"]}
+          flexDirection={{ base: "column", md: "row" }}
           alignItems="center"
           justifyContent="space-between"
           mt={{ base: 8, sm: "auto" }}
@@ -28,9 +29,10 @@ const AboutMeSection = () => {
             environments and clear goal orientation. I would like to develop
             professionally as a web and mobile developer.
           </Text>
-          <AvatarWrapper active={active} onClick={() => setActive(!active)}>
+          <Atom active={active} handleClick={() => setActive(!active)} />
+          {/* <AvatarWrapper active={active} onClick={() => setActive(!active)}>
             <Avatar />
-          </AvatarWrapper>
+          </AvatarWrapper> */}
         </Box>
       </Container>
     </Box>
