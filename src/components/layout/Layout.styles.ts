@@ -1,7 +1,12 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-  body::-webkit-scrollbar {
+    body{
+        -webkit-tap-highlight-color: transparent;
+    }
+
+
+body::-webkit-scrollbar {
   width: 1em;
   background-color: #000;
 }
