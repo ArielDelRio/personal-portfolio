@@ -71,6 +71,7 @@ const Project: React.FC<ProjectProps> = ({
           color="white"
         >
           <CloseButton
+            bg="#000"
             position="absolute"
             top="5"
             right="5"
