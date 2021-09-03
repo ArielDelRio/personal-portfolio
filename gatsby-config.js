@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "Personal Portfolio",
-    description: "this is my personal portfolio",
+    title: "ArieldRioDev",
+    description: "This is my personal portfolio",
     siteUrl: "https://www.arieldriodev.gatsbyjs.io",
   },
   flags: {
