@@ -7,12 +7,10 @@ interface SocialItemProps {
 const ArrowIcon = styled.button`
   font-size: 2.5em;
   transition: all 300ms;
-  &:hover {
-    animation-name: example;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-  }
-  @keyframes example {
+  /* &:hover { */
+  animation: toUp 2s infinite;
+  /* } */
+  @keyframes toUp {
     0% {
       transform: translateY(0);
     }
