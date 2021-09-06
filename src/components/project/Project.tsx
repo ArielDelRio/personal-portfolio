@@ -8,6 +8,7 @@ import {
   Image,
   ScaleFade,
   Text,
+  Tooltip,
   useBoolean,
 } from "@chakra-ui/react";
 import { FaExternalLinkAlt, FaCode, FaEye } from "react-icons/fa";
@@ -86,23 +87,25 @@ const Project: React.FC<ProjectProps> = ({
           >
             <Box w={{ base: "100%", md: "40%" }}>
               <Image boxSize="full" src={main_img} />
-              <Button
-                isDisabled={!stories}
-                size="md"
-                shadow="lg"
-                border="1px solid #fff"
-                rounded="full"
-                position="absolute"
-                top={{ base: "initial", md: "5" }}
-                right={{ base: 5, md: "55%", lg: "57%" }}
-                variant="solid"
-                colorScheme="whatsapp"
-                fontSize={{ base: "1.2em", md: "2em" }}
-                h={{ base: "6%", md: "8%", lg: "11%" }}
-                onClick={setShowStories.on}
-              >
-                <FaEye />
-              </Button>
+              <Tooltip hasArrow label="View Stories">
+                <Button
+                  isDisabled={!stories}
+                  size="md"
+                  shadow="lg"
+                  border="1px solid #fff"
+                  rounded="full"
+                  position="absolute"
+                  top={{ base: "initial", md: "5" }}
+                  right={{ base: 5, md: "55%", lg: "57%" }}
+                  variant="solid"
+                  colorScheme="whatsapp"
+                  fontSize={{ base: "1.2em", md: "2em" }}
+                  h={{ base: "6%", md: "8%", lg: "11%" }}
+                  onClick={setShowStories.on}
+                >
+                  <FaEye />
+                </Button>
+              </Tooltip>
             </Box>
             <Box
               w={{ base: "100%", md: "60%" }}
