@@ -24,21 +24,21 @@ const Footer = () => {
       <Center pt="10">
         <HStack spacing="10">
           <SocialItem
-            href="https://facebook.com/"
+            href="https://www.facebook.com/ariel.delrio.73/"
             target="_blank"
             colorHover="#4267B2"
           >
             <FaFacebookSquare />
           </SocialItem>
           <SocialItem
-            href="https://linkedin.com/"
+            href="https://www.linkedin.com/in/ariel-del-rio-94b34a185/"
             target="_blank"
             colorHover="#0077b5"
           >
             <FaLinkedin />
           </SocialItem>
           <SocialItem
-            href="https://twitter.com"
+            href="https://twitter.com/ArieldRio"
             target="_blank"
             colorHover="#1DA1F2"
           >

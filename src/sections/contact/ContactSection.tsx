@@ -5,7 +5,6 @@ import {
   Center,
   FormControl,
   FormErrorMessage,
-  FormLabel,
   Heading,
   Input,
   Text,
@@ -110,9 +109,9 @@ const ContactSection = () => {
       </Center>
       <Center mt="10">
         <Text w={{ base: "80vw", md: "60vw" }} textAlign="center">
-          Nulla in velit a metus rhoncus tempus. Nulla congue nulla vel sem
-          varius finibus. Sed ornare sit amet lorem sed viverra. In vel urna
-          quis libero viverra facilisis ut ac est.
+          Interested in working together? Fill out the form below with some info
+          about your project and I will get back to you as soon as I can. Please
+          allow a couple days for me to respond.
         </Text>
       </Center>
       <Center py="10">

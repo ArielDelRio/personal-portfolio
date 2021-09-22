@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Footer, Navbar, FloatingChat } from "../components";
 import {
   HeroSection,
   AboutMeSection,
@@ -10,16 +9,13 @@ import {
 
 const IndexPage = () => {
   return (
-    <div>
-      <Navbar />
+    <>
       <HeroSection />
       <AboutMeSection />
       <SkillsSection />
       <PortfolioSection />
       <ContactSection />
-      <FloatingChat />
-      <Footer />
-    </div>
+    </>
   );
 };
 export default IndexPage;

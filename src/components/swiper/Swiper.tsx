@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, {
   Navigation,
@@ -6,11 +6,12 @@ import SwiperCore, {
   Scrollbar,
   A11y,
   Autoplay,
-  Parallax,
   EffectCoverflow,
 } from "swiper";
 
 import "swiper/swiper-bundle.min.css";
+import { useEffect } from "react";
+import { useState } from "react";
 
 SwiperCore.use([
   Navigation,
@@ -21,9 +22,18 @@ SwiperCore.use([
   EffectCoverflow,
 ]);
 
-export const CustomSwiper = ({ children, initialSlide }) => {
+export const CustomSwiper = ({ children, initialSlide, autoplay }) => {
+  const swiperRef = useRef(null);
+
+  useEffect(() => {
+    autoplay
+      ? swiperRef.current.swiper.autoplay.start()
+      : swiperRef.current.swiper.autoplay.stop();
+  }, [autoplay]);
+
   return (
     <Swiper
+      ref={swiperRef}
       initialSlide={initialSlide || 0}
       style={{
         paddingTop: "10vh",

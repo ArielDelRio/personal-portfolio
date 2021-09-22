@@ -4,6 +4,7 @@ const ContainerFloatingChat = styled.div`
   .container-button {
     width: 0;
     height: 0;
+    z-index: 1;
     & > div {
       transition: opacity 300ms;
       opacity: 0.3;

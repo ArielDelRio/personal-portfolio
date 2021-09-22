@@ -1,10 +1,9 @@
 import React, { useRef } from "react";
-import { Link } from "gatsby";
 import { Box, Flex, Text, Button, Stack, Icon, Image } from "@chakra-ui/react";
 import Typical from "react-typical";
 import { FaAt, FaFileDownload, FaGithub, FaLinkedin } from "react-icons/fa";
 import { TagText } from "../../components";
-import { PanaSvg } from "./HeroSection.style";
+import { Pana } from "./HeroSection.style";
 
 const HeroSection = () => {
   return (
@@ -19,11 +18,12 @@ const HeroSection = () => {
         flexDirection="column"
         alignItems="center"
         bgColor="#E5E5E5"
+        pt={{ base: "16", sm: "initial" }}
         w={{ md: "calc(50vw - 40px)" }}
         h={{ base: "60vh", md: "100vh" }}
         fontFamily="Roboto"
       >
-        <Box mt="14">
+        <Box>
           <Text
             fontSize={{ base: "3xl", md: "xx-large" }}
             fontWeight="bold"
@@ -34,7 +34,7 @@ const HeroSection = () => {
           <Text
             fontSize={{ base: "3xl", md: "5xl" }}
             mt="-2"
-            fontFamily="cursive"
+            fontFamily="Roboto"
           >
             Ariel Del Rio
           </Text>
@@ -45,6 +45,7 @@ const HeroSection = () => {
           textAlign="center"
           color="blackAlpha.500"
           mt="-2"
+          mx="6"
         >
           Full-Stack Developer based on JS Technologies
         </Text>
@@ -73,9 +74,9 @@ const HeroSection = () => {
             </Text>
           </TagText>
         </Box>
-        <Box d="flex" flexDirection="column" pt="8">
+        <Box d="flex" flexDirection="column" pt="4">
           <Stack direction="row" spacing={4}>
-            <a href="mailto:arieldelrioviamonte@email.com">
+            <a href="mailto:arieldelrioviamonte@gmail.com">
               <Button
                 bg="blackAlpha.400"
                 color="black"
@@ -99,7 +100,10 @@ const HeroSection = () => {
                 <Icon as={FaGithub} w={6} h={6} />
               </Button>
             </a>
-            <a href="https://www.linkedin.com/in/ariel-del-rio-94b34a185/" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/ariel-del-rio-94b34a185/"
+              target="_blank"
+            >
               <Button
                 bg="blackAlpha.400"
                 color="black"
@@ -114,7 +118,7 @@ const HeroSection = () => {
           </Stack>
           <Button
             as="a"
-            href="../../../ArieldRioDev_Resume.txt"
+            href="ArieldRioDev_Resume.txt"
             download
             w="28"
             h="12"
@@ -158,12 +162,7 @@ const HeroSection = () => {
           alignItems="center"
           mr="4"
         >
-            <PanaSvg  />
-           
-          {/* <Image
-            src={pana_img}
-            alt="Vector Image"
-          /> */}
+          <Pana />
         </Box>
       </Box>
     </Flex>

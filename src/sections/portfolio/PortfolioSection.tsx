@@ -5,17 +5,12 @@ import {
   Divider,
   Heading,
   useBreakpointValue,
-  useDisclosure,
 } from "@chakra-ui/react";
-import {
-  Device,
-  DeviceProps,
-  Project,
-  ProjectProps,
-  Swiper,
-} from "../../components";
+import { Device, Project, Swiper } from "../../components";
 import { useInViewport } from "react-in-viewport";
 import Projects from "./projects";
+import { ProjectProps } from "../../components/project/Project";
+import { DeviceProps } from "../../components/devices/Device";
 
 interface ProjectDataState {
   selectedProject: ProjectProps;
@@ -91,7 +86,10 @@ const PortfolioSection = () => {
                 visibility={inViewport ? "visible" : "hidden"}
               >
                 {!projectData.selectedProject ? (
-                  <Swiper initialSlide={projectData.lastSelectedProjectId}>
+                  <Swiper
+                    initialSlide={projectData.lastSelectedProjectId}
+                    autoplay={inViewport}
+                  >
                     {Projects.map((project) => (
                       <Box
                         key={project.id}
@@ -112,7 +110,6 @@ const PortfolioSection = () => {
                       setProjectData({ ...projectData, selectedProject: null })
                     }
                     fullView
-                    stories={projectData.selectedProject.stories}
                     {...projectData.selectedProject}
                   />
                 )}

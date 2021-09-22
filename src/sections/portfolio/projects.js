@@ -1,72 +1,99 @@
-import gatsby_image_path from "../../images/skill_logos/gatsby.svg";
-import react_image_path from "../../images/skill_logos/react.svg";
-import express_image_path from "../../images/skill_logos/expressjs.svg";
-import mysql_image_path from "../../images/skill_logos/mysql.svg";
-import laravel_image_path from "../../images/skill_logos/laravel.svg";
-import git_image_path from "../../images/skill_logos/git.svg";
+import chat_app_main from "../../images/projects/chat-app/main.png";
+import quiz_app_main from "../../images/projects/quiz-app/main.png";
+import recipe_app_main from "../../images/projects/recipe-app/main.png";
+import evernote_app_main from "../../images/projects/evernote-app/main.png";
+import propensito_bot_main from "../../images/projects/propensito-bot/main.png";
+import kapry_chozas_landing_page_main from "../../images/projects/kapry-chozas-landing-page/main.png";
 
+// const testDriveImage = "https://drive.google.com/uc?export=view&id=1oifNymj9sn9bqg6ciFh-YDQYTClvgIqT"
 const Projects = [
   {
     id: 0,
-    name: "Project 1",
-    main_img: react_image_path,
+    name: "Chat App",
+    main_img: chat_app_main,
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae eos odio provident corporis expedita quisquam. Voluptates qui praesentium corporis alias, voluptatum, consectetur deserunt maxime laborum, sapiente ipsam expedita! Tempora, aperiam.",
-    project_link: "https://project.link",
-    repo_link: "https://repo.link",
-    stories: [
-      { url: react_image_path, description: "Description of project 1" },
-      { url: git_image_path, description: "Description of project 1.2" },
-    ],
+      "Chat-app is a simple and fast chat application for entertainment and communication.",
+    project_link: "http://chat-app-now-web.herokuapp.com/",
+    repo_link: "https://github.com/ArielDelRio/Chat-App",
+    // stories: [
+    //   { url: react_image_path, description: "Description of project 1" },
+    //   { url: git_image_path, description: "Description of project 1.2" },
+    // ],
+    topics: ["react", "nodejs", "chat", "pusher", "express", "material-ui"],
   },
   {
     id: 1,
-    name: "Project 2",
-    main_img: express_image_path,
+    name: "Notes App",
+    main_img: evernote_app_main,
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae eos odio provident corporis expedita quisquam. Voluptates qui praesentium corporis alias, voluptatum, consectetur deserunt maxime laborum, sapiente ipsam expedita! Tempora, aperiam.",
-    project_link: "https://project.link",
-    repo_link: "https://repo.link",
-    stories: [
-      { url: react_image_path, description: "Description of project 2" },
-      { url: gatsby_image_path, description: "Description of project 2.2" },
+      "Notes App is an application to record notes and store them in the cloud in different formats and styles. It also allows you to save audio notes and supports the Markdown format for editing.",
+    project_link: "https://evernote-app.herokuapp.com/",
+    repo_link: "https://github.com/ArielDelRio/evernote-clone",
+    topics: [
+      "react",
+      "firebase",
+      "express",
+      "notes",
+      "material-ui",
+      "socket-io",
+      "speech-recognition",
+      "firebase-admin",
     ],
   },
   {
     id: 2,
-    name: "Project 3",
-    main_img: laravel_image_path,
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae eos odio provident corporis expedita quisquam. Voluptates qui praesentium corporis alias, voluptatum, consectetur deserunt maxime laborum, sapiente ipsam expedita! Tempora, aperiam.",
-    project_link: "https://project.link",
-    repo_link: "https://repo.link",
+    name: "Quiz App",
+    main_img: quiz_app_main,
+    description: "Quiz app is a 10-question quiz game about general topics.",
+    project_link: "https://arieldelrio.github.io/quiz-app/",
+    repo_link: "https://github.com/ArielDelRio/quiz-app",
+    topics: [
+      "react",
+      "api",
+      "typescript",
+      "styled-components",
+      "quiz",
+      "animated",
+    ],
   },
   {
     id: 3,
-    name: "Project 4",
-    main_img: git_image_path,
+    name: "Recipe App",
+    main_img: recipe_app_main,
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae eos odio provident corporis expedita quisquam. Voluptates qui praesentium corporis alias, voluptatum, consectetur deserunt maxime laborum, sapiente ipsam expedita! Tempora, aperiam.",
-    project_link: "https://project.link",
-    repo_link: "https://repo.link",
+      "Recipe_app is a recipe search engine where you can find all kinds of recipes to prepare that contain a preferred food.",
+    project_link: "https://arieldelrio.github.io/recipe_app",
+    repo_link: "https://github.com/ArielDelRio/recipe_app",
+    topics: [
+      "react",
+      "api",
+      "recipes",
+      "react-router",
+      "bootstrap",
+      "skeleton",
+      "lazy-load",
+    ],
   },
   {
     id: 4,
-    name: "Project 5",
-    main_img: mysql_image_path,
+    name: "Propensito bot",
+    main_img: propensito_bot_main,
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae eos odio provident corporis expedita quisquam. Voluptates qui praesentium corporis alias, voluptatum, consectetur deserunt maxime laborum, sapiente ipsam expedita! Tempora, aperiam.",
-    project_link: "https://project.link",
-    repo_link: "https://repo.link",
+      'Propensito_bot is a telegram bot which can be integrated into a group and allow its members to play the classic game of "Who is more likely than ...?" or "Who is more likely than ...?"',
+    project_link: "https://t.me/propensito_bot_group",
+    repo_link: "https://github.com/ArielDelRio/propensito_bot",
+    topics: ["game", "python", "telegram", "python-telegram-bot"],
   },
   {
     id: 5,
-    name: "Project 6",
-    main_img: gatsby_image_path,
+    name: "Kapry-Chozas",
+    main_img: kapry_chozas_landing_page_main,
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae eos odio provident corporis expedita quisquam. Voluptates qui praesentium corporis alias, voluptatum, consectetur deserunt maxime laborum, sapiente ipsam expedita! Tempora, aperiam.",
-    project_link: "https://project.link",
-    repo_link: "https://repo.link",
+      "Kapri-Chozas is a platform for the sale and rental of properties. It is in development and this version shows the landing page of the site.",
+    project_link: "https://kapry-chozas.herokuapp.com/",
+    repo_link:
+      "https://github.com/LimitlessGroup/kapry-chozas/tree/add-landing-page/client",
+    topics: ["react", "styled-components", "typescript", "eslint", "prettier"],
   },
 ];
 
