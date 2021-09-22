@@ -76,7 +76,7 @@ const HeroSection = () => {
         </Box>
         <Box d="flex" flexDirection="column" pt="4">
           <Stack direction="row" spacing={4}>
-            <a href="mailto:arieldelrioviamonte@email.com">
+            <a href="mailto:arieldelrioviamonte@gmail.com">
               <Button
                 bg="blackAlpha.400"
                 color="black"
