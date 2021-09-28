@@ -118,7 +118,7 @@ const HeroSection = () => {
           </Stack>
           <Button
             as="a"
-            href="ArieldRioDev_Resume.txt"
+            href="ArieldRioDev_Resume.pdf"
             download
             w="28"
             h="12"
