@@ -46,9 +46,6 @@ const Footer = () => {
           </SocialItem>
         </HStack>
       </Center>
-      <Center pt="10">
-        <Text>@2021 Ariel Del Rio All Rights Reserved.</Text>
-      </Center>
     </Box>
   );
 };

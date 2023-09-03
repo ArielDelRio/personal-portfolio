@@ -100,10 +100,7 @@ const HeroSection = () => {
                 <Icon as={FaGithub} w={6} h={6} />
               </Button>
             </a>
-            <a
-              href="https://www.linkedin.com/in/ariel-del-rio-94b34a185/"
-              target="_blank"
-            >
+            <a href="https://www.linkedin.com/in/arieldrio" target="_blank">
               <Button
                 bg="blackAlpha.400"
                 color="black"

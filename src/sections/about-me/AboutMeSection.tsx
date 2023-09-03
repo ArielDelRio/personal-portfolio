@@ -24,15 +24,22 @@ const AboutMeSection = () => {
             noOfLines={[5, 0]}
             w={{ base: "auto", sm: "80vw" }}
           >
-            I am a young professional with a passion for his work and excellent
-            organizational skills. With ease of adaptation to changing
-            environments and clear goal orientation. I would like to develop
-            professionally as a web and mobile developer.
+            FullStack Senior Developer with more than 5 years of experience
+            designing, developing and testing web applications and microservices
+            using an ecosystem of technologies such as Next.js, Gatsby, NestJS,
+            Node.js, Express, Firebase, Supabase, MongoDB, Graphql, Turborepo,
+            React, React Native and TypeScript. My workflow includes from the
+            design and modeling of prototypes with high quality standards in the
+            creation of user-friendly interfaces and user experiences, to the
+            implementation of these, employing good development practices
+            focused on the optimization and performance of responsive and
+            progressive applications, as well as the maintenance and deployment
+            of the code. I am a self-taught young man, passionate about
+            technologies and programming, responsible, empathetic and with
+            excellent organizational skills. I love to create tools and deliver
+            solutions by developing web and mobile applications.
           </Text>
           <Atom active={active} handleClick={() => setActive(!active)} />
-          {/* <AvatarWrapper active={active} onClick={() => setActive(!active)}>
-            <Avatar />
-          </AvatarWrapper> */}
         </Box>
       </Container>
     </Box>

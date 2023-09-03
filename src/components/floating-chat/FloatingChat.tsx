@@ -8,7 +8,7 @@ const FloatingChat = () => (
   <ContainerFloatingChat>
     <FloatingWhatsApp
       className="container-button"
-      phoneNumber="+5358377336"
+      phoneNumber="+19793303975"
       accountName="ArieldRio"
       avatar={logo}
       chatMessage="Hello there! 🤝
