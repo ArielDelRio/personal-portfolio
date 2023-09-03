@@ -1,54 +1,27 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+# ArieldRio - FullStack Developer
 
-## 🚀 Quick start
+![ArieldRio](https://avatars.githubusercontent.com/u/53499053?s=96&v=4)
 
-1.  **Create a Gatsby site.**
+👋 Hi there! I'm Ariel Del Rio, a Senior FullStack Developer with over 5 years of experience in the tech world.
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+## About Me
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+I'm a passionate self-learner and programming enthusiast, specializing in designing, developing, and testing web applications and microservices. My skill set encompasses a wide range of technologies, from Next.js, Gatsby, and NestJS to Node.js, Express, Firebase, Supabase, MongoDB, Graphql, Turborepo, React, React Native, and TypeScript.
 
-2.  **Start developing.**
+My approach begins with design and prototyping, maintaining high-quality standards in creating user-friendly interfaces and engaging user experiences. I take pride in bringing these ideas to life, using solid development practices focused on optimization and performance for responsive and progressive applications.
 
-    Navigate into your new site’s directory and start it up.
+## What I Do
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+Beyond development, I also handle code maintenance and deployment. I have a strong work ethic and am known for my responsibility, empathy, and excellent organizational skills.
 
-3.  **Open the code and start customizing!**
+My passion lies in creating tools and solutions through web and mobile application development. On this page, you can explore some of the projects I've worked on and learn more about my skills.
 
-    Your site is now running at http://localhost:8000!
+## Contact and CV
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+If you'd like to know more about my experience or get in touch with me for future collaborations, you can find me at the following locations:
 
-4.  **Learn more**
+- [LinkedIn](https://www.linkedin.com/in/arieldrio/)
+- [Email](mailto:arieldelrioviamonte@gmail.com)
+- [Download my CV](https://arieldriodev.gatsbyjs.io/cv_developer_arieldrio.docx)
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+I hope you enjoy exploring my work, and I look forward to the possibility of collaborating on exciting projects in the future!
